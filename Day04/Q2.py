@@ -10,9 +10,15 @@ if __name__ == '__main__':
                 end_vals = chore_ids.split('-')
                 chores_list += [list(range(int(end_vals[0]), int(end_vals[1])+1))]
 
-            for chore in chores_list[0]:
-                if chore in chores_list[1]:
-                    count += 1
-                    break
+            # original solution
+            #for chore in chores_list[0]:
+            #    if chore in chores_list[1]:
+            #        count += 1
+            #        break
 
-    print(count)
+            # improved solution
+            intersection_vals = set(chores_list[0]).intersection(set(chores_list[1]))
+            if len(intersection_vals) > 0:
+                count += 1
+
+    print(count) # 849

@@ -16,4 +16,4 @@ if __name__ == '__main__':
             if issubset1 or issubset0:
                 count += 1
 
-    print(count)
+    print(count) # 487
