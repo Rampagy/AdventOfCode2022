@@ -49,4 +49,4 @@ if __name__ == '__main__':
         for _, v in dict_box_stack.items():
             solution += v[-1]
 
-        print(solution)
+        print(solution) # ZRLJGSCTR
