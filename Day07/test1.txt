@@ -24,7 +24,6 @@ $ ls
 dir a
 $ cd a
 $ ls
-dir e
 29116 f
 2557 g
 62596 h.lst
