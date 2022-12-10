@@ -23,14 +23,17 @@ if __name__ == '__main__':
 
 
     i = 0
-    sprite_position = regXOverTime[0]
+    sprite_position = 1# regXOverTime[0]
     while  i < len(regXOverTime):
-        if ((i-1)%40) == sprite_position%40 or \
-                (i%40) == sprite_position%40 or \
-                ((i+1)%40) == sprite_position%40:
+        # this is the if statement I used to solve it
+        #if ((i-1)%40) == sprite_position%40 or \
+        #        (i%40) == sprite_position%40 or \
+        #        ((i+1)%40) == sprite_position%40:
+        if abs((i%40) - sprite_position) <= 1:
+            # this is the if that actually produces the right output
             print('#', end ='')
         else: 
-            print('.', end ='')
+            print(' ', end ='')
 
         if ((i+1) % 40) == 0:
             print()
@@ -39,7 +42,8 @@ if __name__ == '__main__':
         i += 1
 
 '''
-I'm not sure if those one to thr right of the Z are supposed to be marked...
+I'm not sure if those ones to the right of the Z are supposed to be marked...
+previous method, but not 100% correct
 
 ####...##.#..#.###..#..#.#....###..#####
 #.......#.#..#.#..#.#..#.#....#..#....#.
@@ -47,4 +51,13 @@ I'm not sure if those one to thr right of the Z are supposed to be marked...
 #.......#.#..#.#..#.#..#.#....###...#..#
 #....#..#.#..#.#..#.#..#.#....#.#..#...#
 #.....##...##..###...##..####.#..#.####.
+
+
+revised correct output
+####   ## #  # ###  #  # #    ###  ####
+#       # #  # #  # #  # #    #  #    #
+###     # #  # ###  #  # #    #  #   #
+#       # #  # #  # #  # #    ###   #
+#    #  # #  # #  # #  # #    # #  #
+#     ##   ##  ###   ##  #### #  # ####
 '''
